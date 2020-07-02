@@ -15,7 +15,12 @@
 
 # Hriday : 2020/07/02
 
-
+# first got the length and if it was only one character, I printed it.
+# If not, I pushed the elements into and array because it was easier to work with than 
+# a string. I compared the current element with all the future elements in the string.
+# If there was a match, I recorded it in another string. In the end, if an element wasn't 
+# matched in furute elements in the string, and there was to recond of it in the second string 
+# used to record previously seen elements, we had the answer.
 
 def firstNotRepeatingCharacter(s):
     slen = len(s)
@@ -23,7 +28,6 @@ def firstNotRepeatingCharacter(s):
     l = ''
     chosen = "_"
     x = 0
-    m = 0
     if slen == 1:
         chosen = s
         return (chosen)
@@ -31,13 +35,9 @@ def firstNotRepeatingCharacter(s):
         for i in range (1,slen+1):
            k.append(s[i-1:i:1])
         for j in range (0,slen-1):
-            print ("searching for " + k[j] + " from " + k[j+1])
             x = s.find(k[j],j+1)
             if (x>0):
                 l += str(k[j])
-            print (x)
-            print (j+1)
-            print (slen-1)
             if ((l.find(k[j]) == -1) & (x == -1)):
                 print (k[j])
                 return (k[j])
