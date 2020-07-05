@@ -1,5 +1,6 @@
-# Given a string s consisting of small English letters, find and return the first instance of a non-repeating character in it. 
-# If there is no such character, return '_'.
+# Given a string s consisting of small English letters, find and return the first 
+# instance of a non-repeating character in it. If there is no such character, 
+# return '_'.
 # Example
 
 # For s = "abacabad", the output should be
@@ -16,11 +17,12 @@
 # Hriday : 2020/07/02
 
 # first got the length and if it was only one character, I printed it.
-# If not, I pushed the elements into and array because it was easier to work with than 
-# a string. I compared the current element with all the future elements in the string.
-# If there was a match, I recorded it in another string. In the end, if an element wasn't 
-# matched in furute elements in the string, and there was to recond of it in the second string 
-# used to record previously seen elements, we had the answer.
+# If not, I pushed the elements into and array because it was easier to work 
+# with than a string. I compared the current element with all the future 
+# elements in the string. If there was a match, I recorded it in another 
+# string. In the end, if an element wasn't matched in futuree elements in 
+# the string, and there was a record of it in the second string used to 
+# record previously seen elements, we had the answer.
 
 def firstNotRepeatingCharacter(s):
     slen = len(s)
