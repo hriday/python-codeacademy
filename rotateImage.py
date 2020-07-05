@@ -28,7 +28,6 @@
 def rotateImage(a):
     b = [row[:] for row in a]
     alen = (len(a)-1)
-    print (alen)
     for i in range(0,len(a)):
         for j in range(0,len(a)):
             b[i][j] = a[alen-j][i]
